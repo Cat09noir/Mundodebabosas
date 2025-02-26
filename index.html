@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajoterra - Mundo de Babosas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Bajoterra</h1>
+            <p>El mundo de las babosas</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar babosas...">
+        </div>
+    </header>
+
+    <div class="intro-container">
+        <video id="intro-video" controls>
+            <source src="intro.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+
+    <main>
+        <h2>Catálogo de Babosas</h2>
+        <div class="babosas-container" id="babosas-list">
+            <!-- Las babosas se cargarán desde JavaScript -->
+        </div>
+    </main>
+
+    <div id="babosa-detail" class="detail-modal">
+        <div class="detail-content">
+            <span class="close-button">&times;</span>
+            <div id="detail-info">
+                <!-- La información detallada se cargará desde JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Página de Bajoterra</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

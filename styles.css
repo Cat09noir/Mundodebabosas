@@ -1,0 +1,248 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1a1a2e; /* Fondo oscuro como las cavernas de Bajoterra */
+    color: #e6e6e6;
+}
+
+/* Encabezado */
+header {
+    background-color: #16213e;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 255, 0.3);
+}
+
+.logo-container h1 {
+    color: #4cc9f0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #4cc9f0;
+}
+
+.logo-container p {
+    color: #f72585;
+    font-style: italic;
+}
+
+.search-container {
+    margin-top: 1rem;
+}
+
+#search-input {
+    padding: 0.5rem;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0f3460;
+    color: white;
+    outline: none;
+    border: 1px solid #4cc9f0;
+}
+
+#search-input:focus {
+    box-shadow: 0 0 10px #4cc9f0;
+}
+
+/* Contenedor de video */
+.intro-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(76, 201, 240, 0.5);
+}
+
+#intro-video {
+    width: 100%;
+    display: block;
+}
+
+/* Sección principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    color: #f72585;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(247, 37, 133, 0.5);
+}
+
+/* Contenedor de babosas */
+.babosas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.babosa-card {
+    background-color: #0f3460;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.babosa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.5);
+}
+
+.babosa-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #4cc9f0;
+}
+
+.babosa-name {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #4cc9f0;
+}
+
+/* Modal de detalles */
+.detail-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detail-content {
+    background-color: #16213e;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #f72585;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #f72585;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #4cc9f0;
+}
+
+.babosa-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.babosa-detail-image-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.babosa-detail-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(76, 201, 240, 0.7);
+}
+
+.babosa-detail-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.babosa-detail-info h2 {
+    color: #4cc9f0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f72585;
+    padding-bottom: 0.5rem;
+}
+
+.transformaciones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.transformacion-card {
+    background-color: #0f3460;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.transformacion-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.transformacion-name {
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #4cc9f0;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: #16213e;
+    color: #e6e6e6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-container {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .detail-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .babosas-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .babosa-image {
+        height: 150px;
+    }
+}
